@@ -1,0 +1,5 @@
+/node_modules
+/firefox/*.png
+/chromium/*.png
+*.zip
+.yarn/install-state.gz

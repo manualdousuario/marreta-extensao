@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Marreta",
+  "version": "0.1",
+  "description": "Chapéu de paywall é marreta!",
+  "homepage_url": "https://marreta.pcdomanual.com/",
+  "author": "Manual do Usuário/Renan Altendorf/Clarissa Mendes",
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "page_action": {
+    "default_title": "Abrir com Marreta",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "marreta@manualdousuario.net",
+      "strict_min_version": "133.0"
+    }
+  }
+}

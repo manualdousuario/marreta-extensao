@@ -1,5 +1,25 @@
 const MARRETA = "https://marreta.pcdomanual.com/p/";
 
+// Address bar button
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status === "complete") {
+    chrome.action.enable(tabId);
+  }
+});
+
+chrome.action.onClicked.addListener((tab) => {
+  chrome.scripting
+    .executeScript({
+      target: { tabId: tab.id },
+      func: () => window.location.href,
+    })
+    .then((results) => {
+      const urlWithParam = `${MARRETA}${encodeURIComponent(results[0].result)}`;
+      chrome.tabs.create({ url: urlWithParam });
+    });
+});
+
+// Context menu
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: "sendTabUrl",
