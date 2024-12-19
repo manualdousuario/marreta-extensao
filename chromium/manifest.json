@@ -14,7 +14,7 @@
   "background": {
     "service_worker": "background.js"
   },
-  "host_permissions": ["https://*/*", "http://*/*"],
+  "host_permissions": ["*://*/*"],
   "action": {
     "default_title": "Abrir essa página com Marreta",
     "default_icon": {

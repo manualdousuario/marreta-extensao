@@ -1,8 +1,6 @@
 const MARRETA = "https://marreta.pcdomanual.com/p/";
 const PAGE_TITLE = "Abrir essa página com Marreta";
 const LINK_TITLE = "Abrir link com Marreta";
-const DISABLED_ICON = "./icon16-white.png";
-const ENABLED_ICON = "./icon16.png";
 
 // Toolbar Button settings
 const toolbarEvent = (tab) => {
@@ -25,19 +23,15 @@ const iconStatus = async (tabId) => {
 
     if (tab && tab.url) {
       const isMarreta = tab.url.includes(MARRETA);
-      const iconPath = isMarreta ? ENABLED_ICON : DISABLED_ICON;
       const title = isMarreta ? "" : PAGE_TITLE;
 
       chrome.action.onClicked[isMarreta ? "removeListener" : "addListener"](
         toolbarEvent
       );
 
-      chrome.action.setIcon({ path: iconPath });
       chrome.action.setTitle({ title });
     }
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) {}
 };
 
 // Fires when the active tab in a window changes

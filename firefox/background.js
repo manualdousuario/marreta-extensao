@@ -1,8 +1,18 @@
 const MARRETA = "https://marreta.pcdomanual.com/p/";
 const PAGE_TITLE = "Abrir essa página com Marreta";
 const LINK_TITLE = "Abrir link com Marreta";
-const DISABLED_ICON = "./icon16-white.png";
 const ENABLED_ICON = "./icon16.png";
+const DARK_ICON = "./icon16-disabled-dark.png";
+const LIGHT_ICON = "./icon16-disabled-light.png";
+
+// Icon Theme settings
+let DISABLED_ICON;
+
+browser.tabs.onActivated.addListener((tabId, changeInfo, tab) => {
+  const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  DISABLED_ICON = isDarkMode ? DARK_ICON : LIGHT_ICON;
+});
 
 // Address Bar Button settings
 const addressBarEvent = (tab) => {
