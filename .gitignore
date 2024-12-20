@@ -2,4 +2,5 @@
 /firefox/*.png
 /chromium/*.png
 *.zip
+*.xpi
 .yarn/install-state.gz
