@@ -50,7 +50,9 @@ const iconStatus = async (tabId) => {
       });
       browser.pageAction.setTitle({ tabId: tabId, title: title });
 
-      browser.pageAction.show(tabId);
+      if (tab.status === "complete") {
+        browser.pageAction.show(tabId);
+      }
     }
   } catch (error) {
     console.warn(error);
