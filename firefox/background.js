@@ -53,7 +53,7 @@ const iconStatus = async (tabId) => {
       browser.pageAction.show(tabId);
     }
   } catch (error) {
-    console.error(error);
+    console.warn(error);
   }
 };
 

@@ -6,7 +6,7 @@
   "author": "Manual do Usuário/Renan Altendorf/Clarissa Mendes",
   "license": "GPL-3.0",
   "scripts": {
-    "dev": "copyfiles -u 1 icons/!(icon16-disabled-light|icon16-disabled-dark).png chromium/ && copyfiles -u 1 icons/* firefox/",
+    "dev": "copyfiles -u 1 icons/!(icon16-disabled-light|icon16-disabled-dark).png chromium/ && copyfiles -u 1 icons/!(icon16-disabled-chromium).png firefox/",
     "build": "yarn dev && jszip-cli add chromium/* > marreta-chromium.zip && jszip-cli add firefox/* > marreta-firefox.zip"
   },
   "devDependencies": {
