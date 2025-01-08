@@ -4,6 +4,22 @@ Use facilmente o [Marreta](https://marreta.pcdomanual.com/).
 
 Com o botão direito do mouse acesse o conteúdo da página atual ou de um link específico. Pela barra de ferramentas, acesse diretamente o conteúdo da página. A extensão abre uma nova aba para acesso de link.
 
+## Firefox
+
+![Firefox](./readme-assets/firefox.jpg "Firefox")
+
+### Firefox Add-ons
+
+[![Get the add-on](readme-assets/amo_badge.png 'Get the add-on')](https://addons.mozilla.org/en-US/firefox/addon/marreta/)
+
+### Arquivo XPI
+
+- Faça o download da última versão do arquivo [`marreta-firefox.xpi`](https://github.com/manualdousuario/marreta-extensao/releases).
+- Abra o Firefox e navegue até `about:addons`.
+- No ícone de engrenagem das configurações, clique em "Instalar de um arquivo..." (localizado no canto superior direito).
+- Selecione o arquivo XPI da extensão.
+- Na página de detalhes da extensão, pode ser necessário permitir a opção "Funcionamento em sites com restrições".
+
 ## Chromium
 
 ![Chromium](./readme-assets/chromium.jpg "Chromium")
@@ -18,15 +34,6 @@ Instalação em navegadores baseados no Chromium.
 - Navegue até o diretório onde você extraiu o arquivo ZIP contendo a extensão.
 - Selecione a pasta da extensão.
 - Fixar na barra de ferramentas.
-
-## Firefox
-
-![Firefox](./readme-assets/firefox.jpg "Firefox")
-
-- Faça o download da última versão do arquivo [`marreta-firefox.xpi`](https://github.com/manualdousuario/marreta-extensao/releases).
-- Abra o Firefox e navegue até `about:addons`.
-- No ícone de engrenagem das configurações, clique em "Instalar de um arquivo..." (localizado no canto superior direito).
-- Selecione o arquivo XPI da extensão.
 
 ## Desenvolvimento
 
