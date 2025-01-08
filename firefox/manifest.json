@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Marreta",
   "version": "0.3",
   "description": "Chapéu de paywall é marreta!",
@@ -8,13 +8,13 @@
   "permissions": [
     "contextMenus",
     "tabs",
-    "activeTab"
+    "activeTab",
+    "<all_urls>"
   ],
   "background": {
     "scripts": ["background.js"]
   },
-  "host_permissions": ["<all_urls>"],
-  "action": {
+  "page_action": {
     "default_title": "Abrir essa página com Marreta",
     "default_icon": {
       "16": "icons/icon16.png",
@@ -29,6 +29,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
+      "id": "{9d75bcbf-c378-4e5a-8a11-db11ad4a9aef}",
       "strict_min_version": "134.0"
     }
   }
