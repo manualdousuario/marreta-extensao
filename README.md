@@ -2,7 +2,7 @@
 
 Use facilmente o [Marreta](https://marreta.pcdomanual.com/).
 
-Com o botão direito do mouse acesse o conteúdo da página atual ou de um link específico. Pela barra de ferramentas (após fixar a extensão), acesse diretamente o conteúdo da página. A extensão abre uma nova aba para acesso de link.
+Com o botão direito do mouse acesse o conteúdo da página atual ou de um link específico. Pela barra de ferramentas (após fixar a extensão), acesse diretamente o conteúdo da página clicando no ícone. A extensão abre uma nova aba para acesso de link.
 
 ## Firefox
 
