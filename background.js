@@ -1,33 +1,27 @@
 const MARRETA = "https://marreta.pcdomanual.com/p/";
 const PAGE_TITLE = "Abrir essa página com Marreta";
 const LINK_TITLE = "Abrir link com Marreta";
-const ENABLED_ICON = "./icon48.png";
-const DARK_ICON = "./icon48-disabled-dark.png";
-const LIGHT_ICON = "./icon48-disabled-light.png";
+const DISABLED_ICON = "./icons/icon48-disabled.png";
+const ENABLED_ICON = "./icons/icon48.png";
 
-// Icon Theme settings
-let DISABLED_ICON;
+if (typeof browser === "undefined") {
+  var browser = chrome;
+}
 
-browser.tabs.onActivated.addListener((tabId, changeInfo, tab) => {
-  const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  DISABLED_ICON = isDarkMode ? DARK_ICON : LIGHT_ICON;
-});
-
-// Address Bar Button settings
-const addressBarEvent = (tab) => {
-  browser.scripting
-    .executeScript({
-      target: { tabId: tab.id },
-      func: () => window.location.href,
-    })
-    .then((results) => {
-      const urlWithParam = `${MARRETA}${encodeURIComponent(results[0].result)}`;
-      browser.tabs.update({ url: urlWithParam });
-    });
+// Toolbar Button settings
+const toolbarEvent = async (tab) => {
+  try {
+    const tabInfo = await browser.tabs.get(tab.id);
+    if (tabInfo.url) {
+      const urlWithParam = `${MARRETA}${encodeURIComponent(tabInfo.url)}`;
+      await browser.tabs.update(tab.id, { url: urlWithParam });
+    }
+  } catch (error) {
+    console.warn(error);
+  }
 };
 
-browser.pageAction.onClicked.addListener(addressBarEvent);
+browser.action.onClicked.addListener(toolbarEvent);
 
 const iconStatus = async (tabId) => {
   try {
@@ -38,21 +32,12 @@ const iconStatus = async (tabId) => {
       const iconPath = isMarreta ? ENABLED_ICON : DISABLED_ICON;
       const title = isMarreta ? "" : PAGE_TITLE;
 
-      browser.pageAction.onClicked[
-        isMarreta ? "removeListener" : "addListener"
-      ](addressBarEvent);
+      browser.action.onClicked[isMarreta ? "removeListener" : "addListener"](
+        toolbarEvent
+      );
 
-      browser.pageAction.setIcon({
-        tabId: tabId,
-        path: {
-          16: iconPath,
-        },
-      });
-      browser.pageAction.setTitle({ tabId: tabId, title: title });
-
-      if (tab.status === "complete") {
-        browser.pageAction.show(tabId);
-      }
+      browser.action.setIcon({ path: iconPath });
+      browser.action.setTitle({ title });
     }
   } catch (error) {
     console.warn(error);
