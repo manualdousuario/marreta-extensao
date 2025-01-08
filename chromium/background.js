@@ -1,20 +1,20 @@
 const MARRETA = "https://marreta.pcdomanual.com/p/";
 const PAGE_TITLE = "Abrir essa página com Marreta";
 const LINK_TITLE = "Abrir link com Marreta";
-const DISABLED_ICON = "./icon48-disabled-chromium.png";
-const ENABLED_ICON = "./icon48.png";
+const DISABLED_ICON = "./icons/icon48-disabled.png";
+const ENABLED_ICON = "./icons/icon48.png";
 
 // Toolbar Button settings
-const toolbarEvent = (tab) => {
-  chrome.scripting
-    .executeScript({
-      target: { tabId: tab.id },
-      func: () => window.location.href,
-    })
-    .then((results) => {
-      const urlWithParam = `${MARRETA}${encodeURIComponent(results[0].result)}`;
-      chrome.tabs.update({ url: urlWithParam });
-    });
+const toolbarEvent = async (tab) => {
+  try {
+    const tabInfo = await chrome.tabs.get(tab.id);
+    if (tabInfo.url) {
+      const urlWithParam = `${MARRETA}${encodeURIComponent(tabInfo.url)}`;
+      await chrome.tabs.update(tab.id, { url: urlWithParam });
+    }
+  } catch (error) {
+    console.warn(error);
+  }
 };
 
 chrome.action.onClicked.addListener(toolbarEvent);

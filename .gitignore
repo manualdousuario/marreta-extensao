@@ -1,6 +1,6 @@
 /node_modules
-/firefox/*.png
-/chromium/*.png
+/firefox/icons
+/chromium/icons
 *.zip
 *.xpi
 .yarn/install-state.gz

@@ -1,12 +1,12 @@
 {
   "name": "marreta-extensao",
-  "version": "0.2",
+  "version": "0.3",
   "description": "Chapéu de paywall é marreta!",
   "repository": "https://github.com/manualdousuario/marreta-extensao",
   "author": "Manual do Usuário/Renan Altendorf/Clarissa Mendes",
   "license": "GPL-3.0",
   "scripts": {
-    "dev": "copyfiles -u 1 icons/!(icon48-disabled-light|icon48-disabled-dark).png chromium/ && copyfiles -u 1 icons/!(icon48-disabled-chromium).png firefox/",
+    "dev": "copyfiles icons/*.png chromium/ && copyfiles icons/*.png firefox/",
     "build": "yarn dev && jszip-cli add chromium/* > marreta-chromium.zip && jszip-cli add firefox/* > marreta-firefox.zip"
   },
   "devDependencies": {

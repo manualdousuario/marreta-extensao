@@ -2,7 +2,7 @@
 
 Use facilmente o [Marreta](https://marreta.pcdomanual.com/).
 
-Com o botão direito do mouse acesse o conteúdo da página atual ou de um link específico. Pela barra de ferramentas, acesse diretamente o conteúdo da página. A extensão abre uma nova aba para acesso de link.
+Com o botão direito do mouse acesse o conteúdo da página atual ou de um link específico. Pela barra de ferramentas (após fixar a extensão), acesse diretamente o conteúdo da página clicando no ícone. A extensão abre uma nova aba para acesso de link.
 
 ## Firefox
 
@@ -18,6 +18,7 @@ Com o botão direito do mouse acesse o conteúdo da página atual ou de um link 
 - Abra o Firefox e navegue até `about:addons`.
 - No ícone de engrenagem das configurações, clique em "Instalar de um arquivo..." (localizado no canto superior direito).
 - Selecione o arquivo XPI da extensão.
+- Fixar na barra de ferramentas.
 - Na página de detalhes da extensão, pode ser necessário permitir a opção "Funcionamento em sites com restrições".
 
 ## Chromium
@@ -75,8 +76,6 @@ yarn build
 ## Roadmap
 
 - Página de configurações
-    - Target dos links e páginas (atualiza aba ou nova aba)
     - Lista customizada para acesso automático
+    - Target dos links e páginas (atualiza aba ou nova aba)
     - Suporte para o Firefox Android
-    - Tema (versão Firefox Desktop)
-    - Acesso (menu de contexto e/ou toolbar)
