@@ -1,8 +1,8 @@
 const MARRETA = "https://marreta.pcdomanual.com/p/";
 const PAGE_TITLE = "Abrir essa página com Marreta";
 const LINK_TITLE = "Abrir link com Marreta";
-const DISABLED_ICON = "./icon16-disabled-chromium.png";
-const ENABLED_ICON = "./icon16.png";
+const DISABLED_ICON = "./icon48-disabled-chromium.png";
+const ENABLED_ICON = "./icon48.png";
 
 // Toolbar Button settings
 const toolbarEvent = (tab) => {
