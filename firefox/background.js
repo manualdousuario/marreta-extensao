@@ -17,7 +17,7 @@ const toolbarEvent = async (tab) => {
   }
 };
 
-browser.pageAction.onClicked.addListener(toolbarEvent);
+browser.browserAction.onClicked.addListener(toolbarEvent);
 
 const iconStatus = async (tabId) => {
   try {
@@ -28,17 +28,17 @@ const iconStatus = async (tabId) => {
       const iconPath = isMarreta ? ENABLED_ICON : DISABLED_ICON;
       const title = isMarreta ? "" : PAGE_TITLE;
 
-      browser.pageAction.onClicked[
+      browser.browserAction.onClicked[
         isMarreta ? "removeListener" : "addListener"
       ](toolbarEvent);
 
-      browser.pageAction.setIcon({
+      browser.browserAction.setIcon({
         tabId: tabId,
         path: {
           16: iconPath,
         },
       });
-      browser.pageAction.setTitle({ tabId: tabId, title: title });
+      browser.browserAction.setTitle({ tabId: tabId, title: title });
     }
   } catch (error) {
     console.warn(error);
