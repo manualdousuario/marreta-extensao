@@ -58,7 +58,7 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 });
 
 // Context Menu settings
-browser.runtime.onInstalled.addListener(() => {
+const createContextMenus = () => {
   browser.contextMenus.create({
     id: "sendTabUrl",
     title: PAGE_TITLE,
@@ -72,6 +72,14 @@ browser.runtime.onInstalled.addListener(() => {
     contexts: ["link"],
     visible: true,
   });
+};
+
+browser.runtime.onInstalled.addListener(createContextMenus);
+browser.runtime.onStartup.addListener(createContextMenus);
+browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status === "complete") {
+    createContextMenus();
+  }
 });
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
