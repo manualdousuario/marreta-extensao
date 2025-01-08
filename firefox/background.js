@@ -1,9 +1,9 @@
 const MARRETA = "https://marreta.pcdomanual.com/p/";
 const PAGE_TITLE = "Abrir essa página com Marreta";
 const LINK_TITLE = "Abrir link com Marreta";
-const ENABLED_ICON = "./icon16.png";
-const DARK_ICON = "./icon16-disabled-dark.png";
-const LIGHT_ICON = "./icon16-disabled-light.png";
+const ENABLED_ICON = "./icon48.png";
+const DARK_ICON = "./icon48-disabled-dark.png";
+const LIGHT_ICON = "./icon48-disabled-light.png";
 
 // Icon Theme settings
 let DISABLED_ICON;
