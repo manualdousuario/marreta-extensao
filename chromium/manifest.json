@@ -2,9 +2,9 @@
   "manifest_version": 3,
   "name": "Marreta",
   "version": "0.3",
-  "description": "Chapéu de paywall é marreta!",
+  "description": "Removedor de paywall e conteúdo indesejado",
   "homepage_url": "https://marreta.pcdomanual.com/",
-  "author": "Manual do Usuário/Renan Altendorf/Clarissa Mendes",
+  "author": "Clarissa Mendes (Extensão), Renan Altendorf (API), Manual do Usuário (Hospedagem)",
   "permissions": [
     "contextMenus",
     "tabs",
@@ -13,7 +13,6 @@
   "background": {
     "service_worker": "background.js"
   },
-  "host_permissions": ["<all_urls>"],
   "action": {
     "default_title": "Abrir essa página com Marreta",
     "default_icon": {
