@@ -7,7 +7,7 @@
   "license": "GPL-3.0",
   "scripts": {
     "icon": "copyfiles icons/*.png chromium/ && copyfiles icons/*.png firefox/",
-    "build": "yarn dev && jszip-cli add chromium/* > marreta-chromium.zip && jszip-cli add firefox/* > marreta-firefox.zip"
+    "build": "yarn icon && jszip-cli add chromium/* > marreta-chromium.zip && jszip-cli add firefox/* > marreta-firefox.zip"
   },
   "devDependencies": {
     "@ffflorian/jszip-cli": "^3.8.1",
