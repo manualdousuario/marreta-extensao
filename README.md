@@ -10,6 +10,11 @@ Com o botão direito do mouse acesse o conteúdo da página atual ou de um link 
 
 ![Firefox](./readme-assets/firefox.jpg "Firefox")
 
+### Versão mínima suportada
+
+- Desktop - Firefox, ESR, Beta, Developer Edition e Nightly: 115.0
+- Mobile - Firefox, Firefox Android Beta, Firefox Android Nightly: 133.0
+
 ### Firefox Add-ons
 
 [![Get the add-on](readme-assets/amo_badge.png 'Get the add-on')](https://addons.mozilla.org/en-US/firefox/addon/marreta/)

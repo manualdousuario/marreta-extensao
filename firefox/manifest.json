@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Marreta",
-  "version": "0.3.2",
+  "version": "0.4",
   "description": "Removedor de paywall e conteúdo indesejado",
   "homepage_url": "https://marreta.pcdomanual.com/",
   "author": "Clarissa Mendes (Extensão), Renan Altendorf (API), Manual do Usuário (Hospedagem)",
@@ -30,7 +30,7 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "{9d75bcbf-c378-4e5a-8a11-db11ad4a9aef}",
-      "strict_min_version": "134.0"
+      "strict_min_version": "115.0"
     },
     "gecko_android": {
       "strict_min_version": "133.0"
