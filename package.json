@@ -3,7 +3,7 @@
   "version": "0.3",
   "description": "Chapéu de paywall é marreta!",
   "repository": "https://github.com/manualdousuario/marreta-extensao",
-  "author": "Manual do Usuário/ Renan Altendorf/ Clarissa Mendes",
+  "author": "Clarissa Mendes (Extension), Renan Altendorf (API), Manual do Usuário (Hosting)",
   "license": "GPL-3.0",
   "scripts": {
     "icon": "copyfiles icons/*.png chromium/ && copyfiles icons/*.png firefox/",
