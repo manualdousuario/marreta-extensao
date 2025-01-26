@@ -1,5 +1,6 @@
 const MARRETA = "https://marreta.pcdomanual.com/p/";
-const PAGE_TITLE = "Abrir essa página com Marreta";
+const PAGE_TITLE = "Abrir com Marreta";
+const ACTIVE_PAGE_TITLE = "URL analisada";
 const LINK_TITLE = "Abrir link com Marreta";
 const DISABLED_ICON = "./icons/icon48-disabled.png";
 const ENABLED_ICON = "./icons/icon48.png";
@@ -26,7 +27,7 @@ const iconStatus = async (tabId) => {
     if (tab && tab.url) {
       const isMarreta = tab.url.includes(MARRETA);
       const iconPath = isMarreta ? ENABLED_ICON : DISABLED_ICON;
-      const title = isMarreta ? "" : PAGE_TITLE;
+      const title = isMarreta ? ACTIVE_PAGE_TITLE : PAGE_TITLE;
 
       browser.browserAction.onClicked[
         isMarreta ? "removeListener" : "addListener"
@@ -35,7 +36,7 @@ const iconStatus = async (tabId) => {
       browser.browserAction.setIcon({
         tabId: tabId,
         path: {
-          16: iconPath,
+          48: iconPath,
         },
       });
       browser.browserAction.setTitle({ tabId: tabId, title: title });
