@@ -10,6 +10,9 @@ Com o botão direito do mouse acesse o conteúdo da página atual ou de um link 
 
 ![Firefox](./readme-assets/firefox.jpg "Firefox")
 
+![Firefox Android 1](./readme-assets/android_1.jpg "Firefox Android 1")
+![Firefox Android 2](./readme-assets/android_2.jpg "Firefox Android 2")
+
 ### Versão mínima suportada
 
 - Desktop - Firefox, ESR, Beta, Developer Edition e Nightly: 115.0
